@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 TP: ES_Facturaciones
----
+Luciano
 Enunciado:
 Para el departamento de facturación:
     A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
@@ -52,12 +52,29 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
+        importe_1=self.txt_importe_1.get()
+        importe_2=self.txt_importe_2.get()
+        importe_3=self.txt_importe_3.get()
+        total= float(importe_1) + float(importe_2) + float(importe_3)
+        alert("Resultado", "El importe total es de: " + str(total))
         pass
 
     def btn_promedio_on_click(self):
+        importe_1=self.txt_importe_1.get()
+        importe_2=self.txt_importe_2.get()
+        importe_3=self.txt_importe_3.get()
+        total= float(importe_1) + float(importe_2) + float(importe_3)
+        promedio = total / 3
+        alert("Resultado", "El promedio de importe es de: " + str(promedio))
         pass
 
     def btn_total_iva_on_click(self):
+        importe_1=self.txt_importe_1.get()
+        importe_2=self.txt_importe_2.get()
+        importe_3=self.txt_importe_3.get()
+        total= float(importe_1) + float(importe_2) + float(importe_3)
+        precio_final = total * 1.21
+        alert("Resultado", "El importe total es de: " + str(precio_final))
         pass      
     
 if __name__ == "__main__":

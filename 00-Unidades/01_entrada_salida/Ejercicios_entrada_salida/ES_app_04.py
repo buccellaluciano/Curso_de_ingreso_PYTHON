@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_04
----
+Luciano
 Enunciado:
 Al presionar el botón  'Mostrar', se deberá obtener un nombre utilizando el Dialog Prompt 
 y luego mostrarlo en la caja de texto txt_nombre (.delete / .insert )
@@ -33,6 +33,8 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        nombre = prompt("titulo", "Ingrese su nombre")
+        self.txt_nombre.insert(0, nombre)
         pass
         
     

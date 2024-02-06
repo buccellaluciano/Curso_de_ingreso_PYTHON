@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_07
----
+Luciano
 Enunciado:
 Al presionar el botón  que corresponde a cada operación (suma, resta, multiplicación, y división), 
 se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB), 
@@ -49,15 +49,31 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        suma = int(operador_1) + int(operador_2)
+        alert("Resultado", "El resultado de la suma es: "+ str(suma))
         pass
 
     def btn_restar_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        resta = int(operador_1) - int(operador_2)
+        alert("Resultado", "El resultado de la resta es: "+ str(resta))
         pass
 
     def btn_multiplicar_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        multi = int(operador_1) * int(operador_2)
+        alert("Resultado", "El resultado de la multiplicación es: "+ str(multi))
         pass
 
     def btn_dividir_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        div = int(operador_1) / int(operador_2)
+        alert("Resultado", "El resultado de la división es: "+ str(div))
         pass
         
 if __name__ == "__main__":

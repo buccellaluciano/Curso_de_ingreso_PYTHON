@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 TP: ES_Pinturas
----
+Luciano
 Enunciado:
 
 2.	Para el departamento de Pinturas:
@@ -48,9 +48,17 @@ class App(customtkinter.CTk):
         self.btn_convertir_f_c.grid(row=4, pady=10, columnspan=2, sticky="nsew")
     
     def btn_convertir_c_f_on_click(self):
+        celsius=self.txt_temperatura_c.get()
+        fahrenheit=self.txt_temperatura_f.get()
+        celsius_a_fahren=(float(celsius) * 9/5) + 32
+        alert('titulo', fahrenheit+"grados centigrados son "+str(celsius_a_fahren)+"grados fahrenheit")
         pass
 
     def btn_convertir_f_c_on_click(self):
+        celsius=self.txt_temperatura_c.get()
+        fahrenheit=self.txt_temperatura_f.get()
+        fahren_a_celsius=(float(fahrenheit) - 32) * 5/9
+        alert('titulo', celsius+"grados fahrenheit son "+str(fahren_a_celsius)+"grados centigrados")
         pass
     
     

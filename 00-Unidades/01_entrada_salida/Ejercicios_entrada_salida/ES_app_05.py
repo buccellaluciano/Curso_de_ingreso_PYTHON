@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_05
----
+Luciano
 Enunciado:
 Al presionar el botón  'Mostrar', se deberá obtener tanto el nombre como la edad contenida en 
 las cajas de texto correspondientes y luego mostrar los datos concatenados utilizando el Dialog Alert. 
@@ -40,10 +40,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        nombre=self.txt_nombre.get()
+        edad=self.txt_edad.get()
+        alert("titulo", 'Resultado'+ ' Usted se llama '+nombre +' y su edad es '+ edad +' años')
         pass
 
-        
-    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

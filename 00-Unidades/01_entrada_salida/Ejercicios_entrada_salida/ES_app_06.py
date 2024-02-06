@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_06
----
+Luciano
 Enunciado:
 Al presionar el botón  'Sumar', se deberán obtener los valores contenidos en las cajas de texto (txt_operador_A y txt_operador_B), transformarlos en números enteros, realizar la suma y luego mostrar el resultado de la operación utilizando el Dialog Alert. 
 Ej: "El resultado de la sumas es: 755" 
@@ -39,6 +39,10 @@ class App(customtkinter.CTk):
 
 
     def btn_sumar_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        suma = int(operador_1) + int(operador_2)
+        alert("Resultado", "El resultado de la suma es: "+ str(suma))
         pass
      
         

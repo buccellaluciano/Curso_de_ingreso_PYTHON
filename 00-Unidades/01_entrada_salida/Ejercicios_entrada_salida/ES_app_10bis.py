@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_10bis
----
+Luciano
 Enunciado:
 Al presionar el botón  'Calcular', se deberán obtener los valores contenidos en las cajas de texto (txt_importe y txt_descuento), 
 transformarlos en números y mostrar el importe actualizado con el descuento utilizando el Dialog Alert.
@@ -41,6 +41,11 @@ class App(customtkinter.CTk):
         self.btn_mostrar.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
     def btn_mostrar_on_click(self):
+        importe=self.txt_importe.get()
+        descuento=self.txt_descuento.get()
+        porcentaje = float(importe) * float(descuento) /100
+        total= float(importe) - porcentaje
+        alert("Resultado", "El importe total con el descuento del '20%' da un total de: " + str(total))
         pass
 
 

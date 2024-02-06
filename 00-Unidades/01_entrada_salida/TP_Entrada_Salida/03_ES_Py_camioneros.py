@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 TP: ES_Camioneros
----
+Luciano
 Enunciado:
 
 3.	Para el departamento de logística:
@@ -46,9 +46,15 @@ class App(customtkinter.CTk):
         self.btn_tiempo_llegada.grid(row=4, pady=10, padx=30, columnspan=2, sticky="nsew")
     
     def btn_cantidad_camiones_on_click(self):
+        toneladas=self.txt_toneladas.get()
+        total_camiones=int(toneladas)/3500
+        alert('titulo', "Para transportar "+toneladas+" toneladas harán falta "+str(total_camiones)+" camión/es")
         pass
 
     def btn_tiempo_llegada_on_click(self):
+        kilometros=self.txt_kilometros.get()
+        total_horas=int(kilometros)/90
+        alert('titulo', "Para recorrer "+kilometros+" kilómetro/s tomará "+str(total_horas)+" hora/s")
         pass
     
     

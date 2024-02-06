@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: entrada_salida_08
----
+Luciano
 Enunciado:
 Al presionar el botón  'Calcular', se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB), 
 transformarlos en números enteros, calcular y mostrar el resto de la división entre ambos números, utilizando el Dialog Alert. 
@@ -40,6 +40,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        operador_1=self.txt_operador_a.get()
+        operador_2=self.txt_operador_b.get()
+        resto = int(operador_1) % int(operador_2)
+        alert("Resultado", "El resto de dividir "+ operador_1+ ' por ' + operador_2+  " es: "+ str(resto))
         pass
         
         
