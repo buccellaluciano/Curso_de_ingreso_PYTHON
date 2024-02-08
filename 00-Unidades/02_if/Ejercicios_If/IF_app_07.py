@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: if_07
----
+Luciano
 Enunciado:
 Los argentinos nativos y por opción desde los dieciséis (16) años y los argentinos
 naturalizados desde los dieciocho (18) años están habilitados a votar. 
@@ -42,6 +42,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        edad=self.txt_edad.get()
+        nacion=self.combobox_tipo.get()
+        edad_int=int(edad)
+        if edad_int>16 and nacion=="NATIVO":
+            alert('titulo', "Usted puede votar.")
+        elif edad_int>=18 and nacion=="NATURALIZADO":
+            alert('titulo', "Usted puede votar.")
+        else:
+            alert('titulo', "Usted no puede votar.")
         pass
         
         

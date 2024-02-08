@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: if_03
----
+Luciano
 Enunciado:
 Al presionar el botón 'Calcular',
  se deberá obtener el contenido de la caja de texto txtEdad, 
@@ -34,6 +34,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        edad = self.txt_edad.get()
+        if int(edad)>=18:
+            alert('titulo', "MAYOR")
+        else:
+                alert('titulo', "MENOR")
         pass
 
         

@@ -7,9 +7,9 @@ import customtkinter
 '''
 nombre:
 apellido:
----
+Buccella
 Ejercicio: if_06bis
----
+Luciano
 Enunciado:
 
 A partir del ingreso de la altura en centímetros de un jugador de baloncesto, el programa deberá determinar la posición del jugador en la cancha, considerando los siguientes parametros:
@@ -28,7 +28,7 @@ class App(customtkinter.CTk):
 
         self.title("UTN FRA")
 
-        self.label1 = customtkinter.CTkLabel(master=self, text="Altura")
+        self.label1 = customtkinter.CTkLabel(master=self, text="Altura (en cm)")
         self.label1.grid(row=0, column=0, padx=20, pady=10)
         
         self.txt_altura = customtkinter.CTkEntry(master=self)
@@ -39,6 +39,16 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        altura = self.txt_altura.get()
+        altura_int=(int(altura))
+        if altura_int<160:
+            alert('titulo', "Es base")
+        elif altura_int>=160 and altura_int<180:
+            alert('titulo', "Es escolta")
+        elif altura_int>=180 and altura_int<=199:
+            alert('titulo', "Es alero")
+        else:
+            alert('titulo', "Es Ala-Pívot o Pívot")
         pass
 
         
