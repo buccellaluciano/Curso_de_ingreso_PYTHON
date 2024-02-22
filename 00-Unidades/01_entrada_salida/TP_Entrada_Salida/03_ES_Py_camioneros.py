@@ -3,6 +3,7 @@ from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
 import customtkinter
+import math
 
 '''
 nombre:
@@ -47,7 +48,8 @@ class App(customtkinter.CTk):
     
     def btn_cantidad_camiones_on_click(self):
         toneladas=self.txt_toneladas.get()
-        total_camiones=int(toneladas)/3500
+        ton_por_camion = 3500
+        total_camiones=math.ceil(int(toneladas) / ton_por_camion)
         alert('titulo', "Para transportar "+toneladas+" toneladas harán falta "+str(total_camiones)+" camión/es")
         pass
 

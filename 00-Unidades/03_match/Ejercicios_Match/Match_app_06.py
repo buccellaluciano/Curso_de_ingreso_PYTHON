@@ -39,6 +39,60 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
+        hora=self.txt_hora.get()
+        match hora:
+            case '00':
+                alert('titulo', "Es de noche")
+            case '1':
+                alert('titulo', "Es de noche")
+            case '2':
+                alert('titulo', "Es de noche")
+            case '3':
+                alert('titulo', "Es de noche")
+            case '4':
+                alert('titulo', "Es de noche")
+            case '5':
+                alert('titulo', "Es de noche")
+            case '6':
+                alert('titulo', "Es de noche")
+            case '7':
+                alert('titulo', "Es de mañana")
+            case '8':
+                alert('titulo', "Es de mañana")
+            case '9':
+                alert('titulo', "Es de mañana")
+            case '10':
+                alert('titulo', "Es de mañana")
+            case '11':
+                alert('titulo', "Es de mañana")
+            case '12':
+                alert('titulo', "Es de tarde")
+            case '13':
+                alert('titulo', "Es de tarde")      
+            case '14':
+                alert('titulo', "Es de tarde")      
+            case '15':
+                alert('titulo', "Es de tarde")      
+            case '16':
+                alert('titulo', "Es de tarde")      
+            case '17':
+                alert('titulo', "Es de tarde")      
+            case '18':
+                alert('titulo', "Es de tarde")      
+            case '19':
+                alert('titulo', "Es de tarde")      
+            case '20':
+                alert('titulo', "Es de noche")      
+            case '21':
+                alert('titulo', "Es de noche")      
+            case '22':
+                alert('titulo', "Es de noche")      
+            case '23':
+                alert('titulo', "Es de noche")         
+            case '24':
+                alert('titulo', "Es de noche")   
+            case other:
+                alert('tiutlo', "La hora no existe") 
         pass
     
     

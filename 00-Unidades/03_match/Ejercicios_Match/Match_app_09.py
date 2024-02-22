@@ -55,8 +55,47 @@ class App(customtkinter.CTk):
         self.btn_informar = customtkinter.CTkButton(master=self, text="Informar", command=self.btn_informar_on_click)
         self.btn_informar.grid(row=4, pady=20, columnspan=2, sticky="nsew")
         
-    
+        
     def btn_informar_on_click(self):
+        destino=self.combobox_destino.get()
+        estacion=self.combobox_estaciones.get()
+        descuento=0
+        aumento=0
+        precio_viaje=15000
+        
+        match estacion:
+            case "Invierno":
+                match destino:
+                    case "Bariloche":
+                        aumento=1.20
+                    case "Mar del plata":
+                        descuento=0.80
+                    case _:
+                        descuento=0.90
+        
+            case "Verano":
+                match destino:
+                    case "Bariloche":
+                        descuento=0.80
+                    case "Mar del plata":
+                        aumento=1.20
+                    case _:
+                        aumento=1.10
+        
+            case _:
+                match destino:
+                    case "Cordoba":
+                     precio_viaje=precio_viaje 
+                    case _:
+                     aumento=1.10       
+        
+        
+        if aumento!=0:
+            precio_viaje=precio_viaje*aumento
+        if descuento!=0:
+            precio_viaje=precio_viaje*descuento
+        
+        alerta=alert('titulo', "Usted pagó "+str(precio_viaje)+" por su viaje a "+ destino)       
         pass
             
     

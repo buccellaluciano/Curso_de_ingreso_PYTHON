@@ -43,6 +43,31 @@ class App(customtkinter.CTk):
 
 
     def btn_calcular_on_click(self):
+        precio=800
+        cantidad=self.combobox_cantidad.get()
+        marca=self.combobox_marca.get()
+        total=precio*float(cantidad)
+        if float(cantidad)>=6:
+            total=total*0.5
+        elif float(cantidad)==5 and marca=="ArgentinaLuz":
+            total=total*0.6
+        elif float(cantidad)==5:
+            total=total*0.7
+        elif float(cantidad)==4 and marca=="ArgentinaLuz" or "FelipeLamparas":
+            total=total*0.75
+        elif float(cantidad)==4:
+            total=total*0.80
+        elif float(cantidad)==3 and marca=="ArgentinaLuz":
+            total=total*0.85
+        elif float(cantidad)==3 and marca=="FelipeLamparas" :
+            total=total*0.9
+        elif float(cantidad)==3:
+            total=total*0.95
+        
+        if total>=4000:
+            total=total*0.95
+            
+        alert('titulo', "El precio total a pagar es de: "+ str(total))
         pass
         
     

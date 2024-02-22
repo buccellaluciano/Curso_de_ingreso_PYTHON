@@ -35,6 +35,18 @@ class App(customtkinter.CTk):
 
 
     def btn_comenzar_ingreso_on_click(self):
+        num=0
+        suma=0
+        prom=1
+        num=prompt('titulo', "ingrese un numero",)
+        while prom<5:
+            suma+=int(num)
+            prom+=1
+            num=prompt('titulo', "ingrese un numero",)
+            
+        prom=suma/prom
+        self.txt_promedio.insert(1, str(prom))
+        self.txt_suma_acumulada.insert(1, str(suma))   
         pass
 
     
