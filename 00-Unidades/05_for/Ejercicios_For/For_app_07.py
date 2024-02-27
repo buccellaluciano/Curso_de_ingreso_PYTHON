@@ -26,6 +26,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        num=prompt('titulo',"ingresar")
+        cont=1
+        for x in range(2, 10):
+            if int(num)%x!=0:
+              cont+=1  
+        if cont==9:
+            alert('titulo',"es un numero primo")
         pass
         
     

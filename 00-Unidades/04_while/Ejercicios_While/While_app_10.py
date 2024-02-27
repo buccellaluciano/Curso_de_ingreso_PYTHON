@@ -70,7 +70,6 @@ class App(customtkinter.CTk):
         alert('titulo', "La suma de los números negativos es de: "+str(negativos_suma)+"Y la cantidad de negativos es de: "+str(negativos))
         alert('titulo', "La cantidad de ceros es de: "+str(ceros))
         
-        
         pass
 
     

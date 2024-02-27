@@ -27,6 +27,13 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        num=prompt('titulo',"ingresar")
+        par=0
+        for x in range (1,int(num)):
+            if x%2==0:
+                alert ('titulo', "numero par encontrado: "+str(x))
+                par+=1
+        alert('titulo', "cantidad de numeros pares: "+str(par))
         pass
             
         

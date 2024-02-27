@@ -26,6 +26,9 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        num = 1
+        for num in range(5, 0, -1):
+            alert('titulo',num)
         pass
        
             

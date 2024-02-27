@@ -2,6 +2,7 @@ import tkinter
 from tkinter.messagebox import showinfo as alert
 from tkinter.messagebox import askyesno as question
 from tkinter.simpledialog import askstring as prompt
+import random
 import customtkinter
 
 '''
@@ -37,6 +38,35 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        num=random.randrange(start=1, stop=5)
+        cont=0
+        ganar=False
+        input=prompt("Ingresar", "Ingrese un numero aleatorio")
+        for x in range(1,10):
+            if int(input)>num:
+                frio_calor="Te pasaste"
+            elif int(input)<num:
+                frio_calor="Falta"
+            else:
+                ganar=True
+            cont+=1
+            if cont<7 and ganar==False:
+                alert('titulo', frio_calor)
+                input=prompt("Ingresar", "Ingrese un numero aleatorio")
+            elif cont ==7 and ganar==False:
+               alert('titulo', "Perdiste, suerte para la próxima")
+               break
+            else:
+                match cont:
+                    case 1:
+                        alert('titulo', "Usted es un psíquico")
+                    case 2:
+                        alert('titulo', "Excelente percepción")
+                    case 3:
+                        alert('titulo', "Esto es suerte")
+                    case _:
+                        alert('titulo', "Excelente tecnica")
+                break     
         pass
                 
 

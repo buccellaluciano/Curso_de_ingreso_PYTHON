@@ -26,6 +26,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
+        num=prompt('titulo', "in")
+        for x in range(0, 9):
+              if int(num)==9:
+                  break
+              num=prompt('titulo', "in")
         pass
         
     
